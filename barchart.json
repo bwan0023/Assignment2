@@ -1,0 +1,62 @@
+[
+ {
+   "Level": "Direct Investment",
+   "Type": "Foreign Investment in Australia ",
+   "Amount": 1026.6
+ },
+ {
+   "Level": "Portfolio Investment - equity",
+   "Type": "Foreign Investment in Australia ",
+   "Amount": 675.8
+ },
+ {
+   "Level": "Portfolio Investment - debt",
+   "Type": "Foreign Investment in Australia ",
+   "Amount": 1369.2
+ },
+ {
+   "Level": "Financial Derivatives",
+   "Type": "Foreign Investment in Australia ",
+   "Amount": 396.4
+ },
+ {
+   "Level": "Other Investment",
+   "Type": "Foreign Investment in Australia ",
+   "Amount": 523
+ },
+ {
+   "Level": "Reserve Assets",
+   "Type": "Foreign Investment in Australia ",
+   "Amount": 0
+ },
+ {
+   "Level": "Direct Investment",
+   "Type": "Australian Investment Abroad ",
+   "Amount": 814.4
+ },
+ {
+   "Level": "Portfolio Investment - equity",
+   "Type": "Australian Investment Abroad ",
+   "Amount": 906
+ },
+ {
+   "Level": "Portfolio Investment - debt",
+   "Type": "Australian Investment Abroad ",
+   "Amount": 426
+ },
+ {
+   "Level": "Financial Derivatives",
+   "Type": "Australian Investment Abroad ",
+   "Amount": 403.6
+ },
+ {
+   "Level": "Other Investment",
+   "Type": "Australian Investment Abroad ",
+   "Amount": 433.2
+ },
+ {
+   "Level": "Reserve Assets",
+   "Type": "Australian Investment Abroad ",
+   "Amount": 60.3
+ }
+]
