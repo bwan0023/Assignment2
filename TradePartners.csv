@@ -1,19 +1,19 @@
-﻿Country,Trade,Year
-China,"246,314",2020
-United States,"72,854",2020
-Japan,"66,259",2020
-Republic of Korea,"34,873",2020
-United Kingdom,"31,774",2020
-Singapore,"26,509",2020
-China,"251,322",2019
-United States,"80,978",2019
-Japan,"86,703",2019
-Republic of Korea,"41,292",2019
-United Kingdom,"38,605",2019
-Singapore,"33,248",2019
-China,"214,788",2018
-United States,"74,023",2018
-Japan,"85,709",2018
-Republic of Korea,"41,005",2018
-United Kingdom,"27,212",2018
-Singapore,"31,981",2018
+﻿Country,Trade,Year,
+China,246314,2020,
+United States,72853,2020,
+Japan,66258,2020,
+Republic of Korea,34873,2020,
+United Kingdom,31773,2020,
+Singapore,26508,2020,
+China,251321,2019,
+United States,80977,2019,
+Japan,86703,2019,
+Republic of Korea,41292,2019,
+United Kingdom,38604,2019,
+Singapore,33248,2019,
+China,214788,2018,
+United States,74022,2018,
+Japan,85709,2018,
+Republic of Korea,41005,2018,
+United Kingdom,27212,2018,
+Singapore,31981,2018,
