@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "data": { "url": "https://raw.githubusercontent.com/bwan0023/Assignment2/main/barchart.json"},
-  "title":"Level investment",
   "width": 470,
     "selection": {
           "Type_highlight": {
