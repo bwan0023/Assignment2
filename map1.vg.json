@@ -1,0 +1,171 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "hconcat" :[{
+        "data": {
+            "url": "https://raw.githubusercontent.com/bwan0023/3179-homework9/main/theworldmap.geo.json",
+            "format": {"type": "topojson", "feature": "worldmap.geo"}
+          },
+          "projection": {"type": "equirectangular"},
+          "title": "Where did Australia Import in 2019",
+        "width": 575,
+        "height": 400,
+        "layer":[
+            {
+              "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+              "encoding": {
+                "tooltip": {
+                  "field": "properties.name"
+                }
+              }
+            },
+            {
+              "transform": [
+                {
+                  "lookup": "properties.name",
+                  "from": {
+                    "data": {
+                      "url": "https://raw.githubusercontent.com/bwan0023/3179-homework9/main/Australia_import_2019_.csv"
+                    },
+                    "key": "Country",
+                    "fields": ["Import"]
+                  }
+                }
+              ],
+              "mark": {"type": "geoshape"},
+              "encoding": {
+                "color": {
+                  "field": "Import",
+                  "type": "quantitative",
+                  "scale":{
+                    "type":"threshold",
+                    "domain": [1000000,100000000,1000000000,10000000000],
+                    "range":["#eff3ff","#bdd7e7","#6baed6","#3182bd","#08519c"]
+                  },
+                  "legend":{"format":".1e"}
+                  },
+                "tooltip": [
+                  {"field": "properties.name", "type": "nominal", "title": "Country"},
+                  {"field": "Import", "type": "quantitative","format":","}
+                ]
+              }
+            }
+          ]},
+          { "data": {
+            "url": "https://raw.githubusercontent.com/bwan0023/3179-homework9/main/theworldmap.geo.json",
+            "format": {"type": "topojson", "feature": "worldmap.geo"}
+          },
+          "projection": {"type": "equirectangular"},
+          "title": "Where did Australia Export in 2019",
+              "width": 575,
+          "height": 400,
+          "layer":[
+              {
+                "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+                "encoding": {
+                  "tooltip": {
+                    "field": "properties.name"
+                  }
+                }
+              },
+              {
+                "transform": [
+                  {
+                    "lookup": "properties.name",
+                    "from": {
+                      "data": {
+                        "url": "https://raw.githubusercontent.com/bwan0023/Assignment2/main/Australia%20export%20in%202019.csv"
+                      },
+                      "key": "Country",
+                      "fields": ["Export"]
+                    }
+                  }
+                ],
+                "mark": {"type": "geoshape"},
+                "encoding": {
+                  "color": {
+                    "field": "Export",
+                    "type": "quantitative",
+                    "scale":{
+                      "type":"threshold",
+                      "domain": [1000000,100000000,1000000000,10000000000],
+                      "range":["#eff3ff","#bdd7e7","#6baed6","#3182bd","#08519c"]
+                    },
+                    "legend":{"format":".1e","orient": "bottom-left"}
+                    },
+                  "tooltip": [
+                    {"field": "properties.name", "type": "nominal", "title": "Country"},
+                    {"field": "Export", "type": "quantitative","format":","}
+                  ]
+                }
+              }
+            ]
+
+          }]}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

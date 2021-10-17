@@ -1,0 +1,153 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/bwan0023/Assignment2/main/chart1csv.csv"},
+  "params":[
+      {
+  "name":"Country_selection",
+  "bind":{
+    "input":"select",
+    "options":[
+       null,
+      "China ",
+      "Japan",
+      "Singapore",
+      "South Korea ",
+      "United Kingdom",
+      "United States of America"
+    ],
+    "labels":[
+      "Show All",
+      "China",
+      "Japan",
+      "Singapore",
+      "South Korea",
+      "United Kingdom",
+      "United States of America"
+    ],
+    "name":"Country Selection: "
+  }
+}],
+  "vconcat" :[{
+  "transform":[
+  {"filter":"Country_selection == null || datum.Country == Country_selection"}
+],
+      "width": 560,
+      "height": 200,
+      "title":"Foreign investment in Australia",
+      "encoding":{
+            "x": {
+            "field": "Year", 
+            "timeUnit": "year",
+            "scale": {"domain": {"param": "brush"}},
+            "axis": {"title": "","tickCount":13,"labelAngle": 0}},
+          "y": {"field": "Foreign investment in Australia", "type": "quantitative",
+          "axis":{"title":"Value (Million)"}}
+      },
+      "layer":[{
+      "mark": {"type" :"line", "strokeWidth":5,
+      "point":{"filled":false,"fill":"white"},"tooltip":true},
+      "selection" :{
+        "Country_highlight":{
+          "type":"multi",
+          "fields":["Country"],
+          "bind":"legend"
+        }
+      },
+      "encoding": {
+          "color": {"field": "Country", "type": "nominal","legend":{"title":"Country (Click to highlight)"}},
+          "opacity":{
+            "condition":{
+              "selection":"Country_highlight","value":1},"value":0.2
+            }
+          },
+          "tooltip":[{"field":"Foreign investment in Australia","type":"quantitative"},{"field":"Year","type": "temporal"},{"field":"Country","type": "nominal"}]
+        },
+         {
+          "mark":"rule",
+          "encoding": {
+            "x":{"datum":{"year":2008}},
+            "color":{"value":"red"},
+            "size":{"value":3}
+          }
+        },
+
+       { "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -2,
+          "dy": -2,
+          "text": "Financial crisis",
+          "fontSize":13
+          
+        },
+     "encoding" : {
+         "x":{"datum":{"year":2008}},
+         "y" : {"datum":600000}
+     }},
+      { "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": -2,
+          "dy": -2,
+          "text": "---------US Exceeded UK",
+          "fontSize":13
+          
+        },
+     "encoding" : {
+         "x":{"datum":{"year":2010}},
+         "y" : {"datum":506476}
+     }}
+     ]}
+
+  ,{
+    "transform":[
+  {"filter":"Country_selection == null || datum.Country == Country_selection"}
+],
+      "width":560,
+      "height":200,
+      "title":"Australian investment abroad",
+      "encoding":{
+         "x": {"field": "Year", "axis": {"title": "Year", "labelAngle": 0}, "timeUnit":"year"},
+          "y": {"field": "Australian investment abroad", "type": "quantitative","axis":{"title":"Value (Million)"}}
+      },
+      "layer":[{
+        "params" :[{
+          "name": "brush",
+          "select": {"type":"interval","encodings":["x"]}
+      }],
+         "mark" : {"type" :"line", "strokeWidth":5,
+      "point":{"filled":false,"fill":"white"},"tooltip" : true},
+      "encoding": {
+          "color": { "legend":{"orient": "bottom"},"field": "Country", "type": "nominal"},
+            "opacity":{
+            "condition":{
+              "selection":"Country_highlight","value":1},"value":0.2
+            }
+        }},
+        {
+          "mark":"rule",
+          "encoding": {
+            "x":{"datum":{"year":2008}},
+            "color":{"value":"red"},
+            "size":{"value":3}
+          }
+        },
+        { "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": -2,
+          "dy": -2,
+          "text": "----Financial crisis",
+          "fontSize":13
+          
+        },
+     "encoding" : {
+         "x":{"datum":{"year":2008}},
+         "y" : {"datum":600000}
+     }}
+]
+}]}
+

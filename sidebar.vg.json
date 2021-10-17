@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "data": { "url": "https://raw.githubusercontent.com/bwan0023/Assignment2/main/barchart.json"},
+  "title":"Level investment",
+  "width": 470,
+    "selection": {
+          "Type_highlight": {
+            "type": "multi",
+            "fields": ["Type"],
+            "bind": "legend"
+          }},
+  "mark": {"type":"bar","tooltip":true},
+  "encoding": {
+    "row": {
+      "field": "Level", "type": "ordinal", "spacing": 10,
+      "header": {"orient": "left","labelAngle": 0,
+      "labelAlign":"left"}
+    },
+   "x": {"field": "Amount", "type": "quantitative", "axis":{"labelAngle":0,"title":"Amount(billion)"} },
+   "y": {"field" : "Type", "axis": null},
+    "color": {
+      "legend":{"orient": "bottom","title":"Type (Click to highlight)"},
+      "field": "Type",
+      "scale": {"range": ["#675193", "#ca8861"]}
+    },
+      "opacity": {
+            "condition": {"selection": "Type_highlight", "value": 1},
+            "value": 0.2
+          }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1}
+  }
+}
