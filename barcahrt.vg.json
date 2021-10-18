@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":"Top 6 trade partners of Australia",
+  "width": 600,
+  "data": {"url": "https://raw.githubusercontent.com/bwan0023/Assignment2/main/TradePartners.csv"},
+  "encoding":{"x": {"field": "Year", "axis": {"labelAngle":0}},
+    "y": {"field" : "Trade", "type": "quantitative","axis":{"title":"Trade value(million)"}}},
+  "layer":[{
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 3,"cornerRadiusTopRight": 3, "tooltip":true},   
+    "selection": {
+        "Country_highlight": {
+          "type": "multi",
+          "fields": ["Country"],
+          "bind": "legend"
+        }},
+  "encoding": {
+    "color": {"field": "Country","legend":{"orient": "bottom","columnPadding":0,"symbolSize":150,
+  "symbolStrokeWidth":25,"title":"Country (Click to highlight)"}
+  },
+   "opacity": {
+          "condition": {"selection": "Country_highlight", "value": 1},
+          "value": 0.2
+        }
+  }
+  },
+  { "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-top",
+          "dx": -2,
+          "dy": -2,
+          "text": "China is the largesst trade partner",
+          "fontSize":11.5
+        },
+     "encoding" : {
+         "x" : {"datum" : 2019},
+         "y" : {"datum":400000}
+     }},
+      {
+      "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-top",
+          "dx": -2,
+          "dy": -2,
+          "text": "Trade droped due to covid-19",
+          "fontSize":15
+        },
+     "encoding" : {
+         "x" : {"datum" : 2020},
+         "y" : {"datum":530000}
+     }
+    },
+    { "mark": {
+      "type": "text",
+      "align": "center",
+      "baseline": "line-top",
+      "dx": -2,
+      "dy": -2,
+      "text": "China",
+      "fontSize":15
+    },
+ "encoding" : {
+     "x" : {"datum" : 2018},
+     "y" : {"datum":400000}
+ }},
+ { "mark": {
+  "type": "text",
+  "align": "center",
+  "baseline": "line-top",
+  "dx": -2,
+  "dy": -2,
+  "text": "Japan",
+  "fontSize":15
+},
+"encoding" : {
+ "x" : {"datum" : 2018},
+ "y" : {"datum":230000}
+}},
+{ "mark": {
+  "type": "text",
+  "align": "center",
+  "baseline": "line-top",
+  "dx": -2,
+  "dy": -2,
+  "text": "US",
+  "fontSize":15
+},
+"encoding" : {
+ "x" : {"datum" : 2018},
+ "y" : {"datum":50000}
+}}]
+}
