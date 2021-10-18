@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment2</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="layout.css" media="all">
+
+
+</head>
+
+<style>
+    h1.adjust{
+        padding-left:120px;
+        padding-top:35px;
+    }
+    img.position{
+        padding-left:180px;
+    }
+    li.gap{
+        padding-bottom:15px;
+    }
+    li.des{
+        padding-bottom:25px;
+    }
+    p.left{
+        padding-left:300px;
+        padding-bottom:30px;
+    }
+
+</style>
+
+
+
+
+<body>
+  
+    <div class="page">
+        <!--test title-->
+        <div class="pure-g">
+            <div class="pure-u-1-5">
+                <img src = "Australia.png" width="150" hight="150" class ="position" />
+              </div>
+              <div class="pure-u-4-5">
+                <h1 class="adjust">Trade and Investment in Australia</h1>
+            </div>
+              </div>
+
+
+        <!-- pure grid group -->
+         <div class="pure-g">   
+           <div class="pure-u-4-5">
+             <p class = left><span class="small">Australia's flexible markets, effective and targeted economic policies provide a solid foundation for prosperous trade.
+                Australia's sustained and rapid economic gross in the past 20 years has attracted a large amount of foreign investments.</span><br/></p>
+           </div>
+         </div>
+
+         <!--title 1-->
+         <h2 id = "center">The import and export of Australia in 2019</h2>
+
+    <!-- chart 1 --> 
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id = center>
+                <div id="vis1" class="vis-container"></div>
+        </div>
+          </div>
+      </div> 
+
+    <div class=pure-g>
+        <div class="pure-u-1-1">
+            <h3>Interactive tools</h3>
+            <ul>
+                <li class="gap">Hover over to see the tooltips</li>
+            </ul>
+            <h3>Short discription of the maps</h3>
+            <ol>
+                <li class =des>
+                    The map is side by side and same colour
+                    this is easy to compare.
+                </li>
+                <li class=des>China was the largest importer and exporter to Australia</li>
+            </ol>
+        </div>
+
+        
+    </div>
+
+    <!--title -->
+    
+        <h2 id = "center">The type of import and export goods</h2>   
+    
+
+    <!--chart1.5-->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="description description-left">
+              <h3>Interactive tools</h3>
+              <ul>
+                <li class="gap">Click legend to hlight a sector</li>
+                <li class="gap">Use selection menu to filter out other sectors</li>
+                <li class="gap">User slider to change years</li>
+                <li class="gap">Hover over to see tooltips</li>
+              </ul> 
+              <h3>Short discription of the charts</h3>
+              <ol>
+                <li class="des">The stacked area charts show the trend of how the amount of different types of export 
+                    and import goods change from 1995 to 2019.</li>
+                <li class="des">The most imported good was <span class="bigger" style="color:#b3de69;font-weight:bold;">services</span> and the most exported good was <span class="bigger" style="color:#80b1d3;font-weight:bold"> minerals </span> in last 25 years.</li>
+                <li class="des">The amount of imports and exports gross from 1995 until 2008 where the golabl financial
+                    crisis occurs, all type of import and export good dropped at that time.</li>
+                <li class="des">The <span class="middle" style="font-weight:bold;"> advantage </span> of stacked area chart is to enlarge the trend. Since the unit is billion. For example, the amount of imported 
+                    agriculture dropped 1.5 billion in 2009 compared to 2008. If we only select agriculture, it is difficult
+                    to observe the trend, but 1.5 billion is a very large amount. However, when we select all and the chart stacked, the 
+                    trend becomes obvious.</li>
+              </ol> 
+            </div>
+          </div>
+        <div class="pure-u-2-3">
+            <div id = right>
+            <div id="vis0" class="vis-container"></div>
+        </div>
+          </div>
+      </div> 
+
+      <!--title -->
+    
+      <h2 id = "center">The top 6 trade partners</h2> 
+
+
+    <!--chart 2.5-->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="description description-vis3">
+              <h3>Interactive tools</h3>
+              <ul>
+                <li class=gap>Click the legend to highlight country</li>
+                <li class=gap>Hover over to see the tooltips</li>
+              </ul>
+              <h3>Short discription of the charts</h3>
+              <ol>
+                <li class=gap><span class="bigger" style="color:#3498DB;font-weight:bold;">China</span> has been the largest trade partner in last 3 years</li>
+                <li class=gap>The total trade value of <span class="middle" style="font-weight: bold;"> top 6</span>  trade partners was increased in 2019, However
+                    due to covid-19, the total trade value decreased in 2020.
+                </li>
+                <li class=gap>The trade value between Australia and Korea, Singapore, United Kingdom
+                    were close as in the chart the hight of these three countries were roughly the same.
+                </li>
+              </ol>  
+            </div>
+          </div>
+        <div class="pure-u-2-3">
+            <div id = right class = padtop>
+          <div id="vis5" class="vis-container"></div>
+        </div>
+        </div>
+    </div>
+
+    <!--title -->
+    
+    <h2 id = "center">The investment between Australia and trade partners</h2>
+
+    <!--chart 2 -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="description description-left">
+              <h3>Interactive tools</h3>
+              <ul>
+                <li class=gap>Click the legend to highlight country</li>
+                <li class=gap>Hover over to see the tooltips</li>
+                <li class=gap>Use selection menue to filter out other countres</li>
+                <li class=gap>Use bursh on the second chart to change the time period of first chart</li>
+              </ul>
+              <h3>Short discription of the charts</h3>
+              <ol>
+                <li class=gap style="font-weight: bold;">There are some countries overlapped, use lengend or selection menu to look up these countries</li>
+
+                <li class=gap>From 2001 to 2010 the foreign investment from United states and United Kingdom were very close,
+                    Howeve, <span class="middle" style="font-weight:bold;">after 2011</span>, the foreign from <span class="bigger" style="color:#F4D03F;font-weight:bold;">United States</span> 
+                    exceeded United Kingdom becomes the <span class="middle" style="font-weight:bold;">largest </span>
+                    country that invested in Australia.
+                </li>
+                <li class=gap>In last 20 years, <span class="bigger" style="color:#F4D03F;font-weight:bold;">United States </span>was the country with the most investments from Australia and 
+                    the amount was much larger than other trade partners.
+                </li>
+                <li class=gap>There was an <span class="middle" style="font-weight:bold;"> increase trend </span> for both Foreign investment and Australian investment abroad 
+                    in last 20 years.
+                </li>
+              </ol> 
+            </div>
+          </div>
+        <div class="pure-u-2-3">
+            <div id = right class = padtop>
+          <div id="vis2" class="vis-container"></div>
+        </div>
+        </div>
+    </div>
+
+    <!--title -->
+    
+    <h2 id = "center">The level investment in 2020</h2>
+
+    <!--chart 3 -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="description description-vis3">
+                <h3>Interactive tools</h3>
+                <ul>
+                    <li class=gap>Click the legend to highlight country</li>
+                    <li class=gap>Hover over to see the tooltips</li>
+                  </ul>
+                  <h3>Short discription of the charts</h3>
+                  <ol>
+                    <li class=gap><span class="bigger" style="color:#ca8861;font-weight:bold;"> Foreign </span> like to invest debt in Australia</li>
+                    <li class=gap><span class="bigger" style="color:#675193;font-weight:bold;"> Australian </span>like to invest equity abroad</li>
+                    <li class=gap>Foreign did not invest any reserve assets in Australia in 2020</li>
+                    <li class=gap><span class="middle" style="font-weight:bold;">Click the legend</span> to highlight the type and compare for different 
+                        levels of investment</li>
+                    <li class=gap>Unfortunately, there is actually no way to add annotations on grouped bar chart
+                        However,the chart shows the data clearly, it is not necessary to have annotations
+                    </li>
+                  </ol>  
+            </div>
+          </div>
+        <div class="pure-u-2-3">
+            <div id = right class=padtop>
+          <div id="vis3" class="vis-container"></div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Javascript file -->
+
+    <script type="text/javascript">
+        var vg_2 = "chart1.vg.json";
+        var vg_1 = "map1.vg.json";
+        var vg_3 = "sidebar.vg.json"
+        var vg_4 = "sector.vg.json"
+        var vg_5 = "barcahrt.vg.json"
+
+        vegaEmbed('#vis1', vg_1, {"actions": false});
+        
+         vegaEmbed('#vis2', vg_2, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', vg_3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+        vegaEmbed('#vis0', vg_4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+        vegaEmbed('#vis5', vg_5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+      </script>
+    </body>
+    </html>
+
+
+    
