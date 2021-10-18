@@ -29,7 +29,8 @@
           "baseline": "line-top",
           "dx": -2,
           "dy": -2,
-          "text": "China is the largesst trade partner"
+          "text": "China is the largesst trade partner",
+          "fontSize":11.5
         },
      "encoding" : {
          "x" : {"datum" : 2019},
@@ -42,11 +43,51 @@
           "baseline": "line-top",
           "dx": -2,
           "dy": -2,
-          "text": "Trade droped due to covid-19"
+          "text": "Trade droped due to covid-19",
+          "fontSize":15
         },
      "encoding" : {
          "x" : {"datum" : 2020},
          "y" : {"datum":530000}
      }
-    }]
+    },
+    { "mark": {
+      "type": "text",
+      "align": "center",
+      "baseline": "line-top",
+      "dx": -2,
+      "dy": -2,
+      "text": "China",
+      "fontSize":15
+    },
+ "encoding" : {
+     "x" : {"datum" : 2018},
+     "y" : {"datum":400000}
+ }},
+ { "mark": {
+  "type": "text",
+  "align": "center",
+  "baseline": "line-top",
+  "dx": -2,
+  "dy": -2,
+  "text": "Japan",
+  "fontSize":15
+},
+"encoding" : {
+ "x" : {"datum" : 2018},
+ "y" : {"datum":230000}
+}},
+{ "mark": {
+  "type": "text",
+  "align": "center",
+  "baseline": "line-top",
+  "dx": -2,
+  "dy": -2,
+  "text": "US",
+  "fontSize":15
+},
+"encoding" : {
+ "x" : {"datum" : 2018},
+ "y" : {"datum":50000}
+}}]
 }
